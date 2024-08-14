@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    int rows,i,j,k;
+    printf("enter the number of rows:");
+    scanf("%d",&rows);
+    for(i=1;i<=rows;i++)
+    {
+        for(k=i;k<=rows-1;k++)
+        {
+            printf("  ");
+        }
+
+        for(j=1;j<=i;j++)
+        {
+       
+           printf("%2s","*");
+       }
+         printf("\n");
+    }
+    
+    return 0;
+}
+
+output
+enter the number of rows:5
+         *
+       * *
+     * * *
+   * * * *
+ * * * * *
+
+
+=== Code Execution Successful ===
