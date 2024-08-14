@@ -1,25 +1,26 @@
 #include <stdio.h>
-
-int main()
-{
-    int rows = 5;
-    for (int i = 0; i < rows; i++) {
-
-        for (int j = 0; j < 2 * i; j++) {
-            printf(" ");
-        }
-        for (int k = 0; k < 2 * (rows - i) - 1; k++) {
-            printf("* ");
-        }
-        printf("\n");
-    }
+int main() {
+   int rows, i, j, space;
+   printf("Enter the number of rows: ");
+   scanf("%d", &rows);
+   for (i = rows; i >= 1; --i) {
+      for (space = 0; space < rows - i; ++space)
+         printf("  ");
+      for (j = i; j <= 2 * i - 1; ++j)
+         printf("* ");
+      for (j = 0; j < i - 1; ++j)
+         printf("* ");
+      printf("\n");
+   }
+   return 0;
 }
+
 output
-* * * * * * * * * 
-  * * * * * * * 
-    * * * * * 
-      * * * 
-        * 
+Enter the number of rows: 4
+* * * * * * * 
+  * * * * * 
+    * * * 
+      * 
 
 
 === Code Execution Successful ===
